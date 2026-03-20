@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct8iqgio7ish"]
+
+[ext_resource type="Texture2D" uid="uid://b5bxceqho51bm" path="res://Sprites/Unused/Gunner1x1.png" id="2_jtvso"]
+
+[sub_resource type="GDScript" id="GDScript_sh7o4"]
+script/source = "class_name Shooter
+extends Buildable
+
+signal projectile_shot
+
+var projectile
+var fire_rate: float = 0.5
+
+var firing: bool = true
+
+func _ready():
+	while firing:
+		await get_tree().create_timer(fire_rate).timeout
+		shoot_projectile()
+
+func shoot_projectile():
+	print(\"pew\")
+	emit_signal(\"projectile_shot\")
+"
+
+[node name="Cannon" type="Node2D"]
+script = SubResource("GDScript_sh7o4")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_jtvso")

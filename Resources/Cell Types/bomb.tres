@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CellType" load_steps=4 format=3 uid="uid://hhuafbfj436d"]
+
+[ext_resource type="Script" path="res://Resources/Cell Types/cell_type.gd" id="1_agdfw"]
+[ext_resource type="Texture2D" uid="uid://dxkt3srigv3sr" path="res://Sprites/cell_sprites.png" id="2_pr4p4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3hfx"]
+atlas = ExtResource("2_pr4p4")
+region = Rect2(20, 20, 20, 20)
+
+[resource]
+script = ExtResource("1_agdfw")
+id = "bomb"
+display_name = "Angry Guy"
+sprite = SubResource("AtlasTexture_k3hfx")
+tooltip = "Removes 1 life when revealed"
+sprite_color = Color(1, 0, 0.337255, 1)
+tags = Array[int]([1, 0])

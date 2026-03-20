@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SpawnEntities" load_steps=3 format=3 uid="uid://bujrjkbatgy3j"]
+
+[ext_resource type="Resource" uid="uid://cvwwclruldwwl" path="res://Resources/Entities/bo_fighter.tres" id="1_2fuh5"]
+[ext_resource type="Script" path="res://Resources/Passives/spawn_entities.gd" id="2_ie22p"]
+
+[resource]
+script = ExtResource("2_ie22p")
+spawn_method = 0
+spawn_method_value = 20
+entity = Array[Resource("res://Resources/Entities/entity.gd")]([ExtResource("1_2fuh5")])
+id = "spawn_bo_fighters"
+name = "Bo Fighter Army"
+description = ""
+flavor_text = ""

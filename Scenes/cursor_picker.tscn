@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjxw66l7xe33v"]
+
+[ext_resource type="Script" path="res://Scripts/cursor_picker.gd" id="1_jqxa2"]
+
+[node name="CursorPicker" type="Node2D" groups=["cursor"]]
+script = ExtResource("1_jqxa2")

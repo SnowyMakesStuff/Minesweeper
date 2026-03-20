@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://f6317uw3t31h"]
+
+[ext_resource type="Script" path="res://Scripts/cell.gd" id="1_tqcsd"]
+[ext_resource type="Texture2D" uid="uid://dxkt3srigv3sr" path="res://Sprites/cell_sprites.png" id="2_2f8ky"]
+[ext_resource type="Texture2D" uid="uid://50f7pved1ovd" path="res://Sprites/dither.png" id="3_wim18"]
+[ext_resource type="Theme" uid="uid://gw1ggw8uhgta" path="res://cell_hint.tres" id="5_koyta"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikogw"]
+resource_local_to_scene = true
+atlas = ExtResource("2_2f8ky")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3ob1"]
+atlas = ExtResource("3_wim18")
+region = Rect2(12, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu55x"]
+atlas = ExtResource("3_wim18")
+region = Rect2(0, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3sls"]
+atlas = ExtResource("3_wim18")
+region = Rect2(0, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5qgk"]
+atlas = ExtResource("3_wim18")
+region = Rect2(12, 0, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_prusr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3ob1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu55x")
+}],
+"loop": false,
+"name": &"conceal",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3sls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5qgk")
+}],
+"loop": false,
+"name": &"reveal",
+"speed": 12.0
+}]
+
+[node name="Block" type="Node2D" groups=["pickable"]]
+script = ExtResource("1_tqcsd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_repeat = 2
+texture = SubResource("AtlasTexture_ikogw")
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="RevealCover" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_repeat = 2
+sprite_frames = SubResource("SpriteFrames_prusr")
+animation = &"reveal"
+
+[node name="HintLabel" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = -8.0
+offset_top = -13.0
+offset_bottom = 3.0
+theme = ExtResource("5_koyta")
+text = "2"
+scroll_active = false

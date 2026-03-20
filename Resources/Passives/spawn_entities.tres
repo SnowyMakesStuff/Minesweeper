@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SpawnEntities" load_steps=2 format=3 uid="uid://csx0dekb1t76l"]
+
+[ext_resource type="Script" path="res://Resources/Passives/spawn_entities.gd" id="1_gk255"]
+
+[resource]
+script = ExtResource("1_gk255")
+spawn_method = 1
+spawn_method_value = 20
+entity = Array[Resource("res://Resources/Entities/entity.gd")]([])
+id = "spawn_entities_at_start"
+name = ""
+description = ""
+flavor_text = ""

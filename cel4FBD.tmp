@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://f6317uw3t31h"]
+
+[ext_resource type="Script" path="res://cell.gd" id="1_amp4f"]
+[ext_resource type="Texture2D" uid="uid://vsj8s01qsse8" path="res://cells.png" id="2_hulfo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikogw"]
+resource_local_to_scene = true
+atlas = ExtResource("2_hulfo")
+region = Rect2(0, 0, 16, 16)
+
+[node name="Block" type="Node2D" groups=["pickable"]]
+script = ExtResource("1_amp4f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_repeat = 2
+texture = SubResource("AtlasTexture_ikogw")
+region_rect = Rect2(0, 0, 16, 16)

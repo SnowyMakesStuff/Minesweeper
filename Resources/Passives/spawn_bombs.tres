@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SpawnBombs" load_steps=3 format=3 uid="uid://ly4rkqxn32cb"]
+
+[ext_resource type="Resource" uid="uid://hhuafbfj436d" path="res://Resources/Cell Types/bomb.tres" id="1_fuetg"]
+[ext_resource type="Script" path="res://Resources/Passives/spawn_bombs.gd" id="2_poxvx"]
+
+[resource]
+script = ExtResource("2_poxvx")
+spawn_method = 1
+spawn_method_value = 33
+cell_type = ExtResource("1_fuetg")
+id = "bombs"
+name = "Landmines"
+description = ""
+flavor_text = ""

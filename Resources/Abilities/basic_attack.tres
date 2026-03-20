@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Attack" load_steps=4 format=3 uid="uid://cngel7m2f82e1"]
+
+[ext_resource type="Script" path="res://Resources/Abilities/basic_attack.gd" id="1_y6hgf"]
+[ext_resource type="Texture2D" uid="uid://c5sjwkule6lwo" path="res://Sprites/ability_icons.png" id="2_ufel3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3vnc"]
+atlas = ExtResource("2_ufel3")
+region = Rect2(0, 0, 20, 20)
+
+[resource]
+script = ExtResource("1_y6hgf")
+id = "basic_attack"
+display_name = "Basic Attack"
+texture = SubResource("AtlasTexture_l3vnc")
+description = "Reveal a cell. If an enemy is revealed, attack it."
+flavor_text = "\"...Gotcha\""

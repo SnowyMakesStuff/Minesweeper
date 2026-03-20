@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm2yb7wayi3mx"]
+
+[ext_resource type="PackedScene" uid="uid://bqq2dy6ji8h00" path="res://tank.tscn" id="1_aj50y"]
+[ext_resource type="PackedScene" uid="uid://f6317uw3t31h" path="res://block.tscn" id="2_jpcxb"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.4, 2.4)
+
+[node name="Tank" parent="." instance=ExtResource("1_aj50y")]
+
+[node name="Block" parent="Tank" instance=ExtResource("2_jpcxb")]
+
+[node name="Block2" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(16, 0)
+
+[node name="Block3" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(32, 0)
+
+[node name="Block4" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(16, -16)
+
+[node name="Block5" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(16, 16)
+
+[node name="Block6" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(16, 32)
+
+[node name="Block7" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(48, 0)
+
+[node name="Block8" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(32, 16)
+
+[node name="Block9" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(48, 16)
+
+[node name="Block10" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(64, 16)
+
+[node name="Block11" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(64, 32)
+
+[node name="Block12" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(48, 32)
+
+[node name="Block13" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(48, 48)
+
+[node name="Block14" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(48, 64)
+
+[node name="Block15" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(-16, 0)
+
+[node name="Block16" parent="Tank" instance=ExtResource("2_jpcxb")]
+position = Vector2(0, -16)

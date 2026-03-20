@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CellType" load_steps=4 format=3 uid="uid://bput7tbiolfou"]
+
+[ext_resource type="Script" path="res://Resources/Cell Types/cell_type.gd" id="1_knrvh"]
+[ext_resource type="Texture2D" uid="uid://dxkt3srigv3sr" path="res://Sprites/cell_sprites.png" id="2_f2ir5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw4de"]
+atlas = ExtResource("2_f2ir5")
+region = Rect2(60, 0, 20, 20)
+
+[resource]
+script = ExtResource("1_knrvh")
+id = "rock"
+display_name = "Rock"
+sprite = SubResource("AtlasTexture_gw4de")
+tooltip = "Does nothing."
+sprite_color = Color(0.4514, 0.588853, 0.61, 1)
+tags = Array[int]([2, 3])

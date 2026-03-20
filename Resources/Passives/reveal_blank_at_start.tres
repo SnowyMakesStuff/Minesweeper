@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RevealBlankAtStart" load_steps=2 format=3 uid="uid://es4gtofcnfx6"]
+
+[ext_resource type="Script" path="res://Resources/Passives/reveal_blank_at_start.gd" id="1_f5yvt"]
+
+[resource]
+script = ExtResource("1_f5yvt")
+id = "reveal_blank_at_start"
+name = "Pressure Flaker"
+description = "At the start of the round, reveal 1 cell with no surrounding danger."
+flavor_text = ""

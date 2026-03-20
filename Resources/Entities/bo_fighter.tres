@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="BoFighter" load_steps=4 format=3 uid="uid://cvwwclruldwwl"]
+
+[ext_resource type="Script" path="res://Resources/Entities/bo_fighter.gd" id="1_xm66m"]
+[ext_resource type="Texture2D" uid="uid://b7l1u1cdvg2mm" path="res://Sprites/bo_fighter.png" id="2_pkq0e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1cq7"]
+atlas = ExtResource("2_pkq0e")
+region = Rect2(0, 0, 20, 20)
+
+[resource]
+script = ExtResource("1_xm66m")
+id = "bo_fighter"
+display_name = "Honor Guard"
+sprite = SubResource("AtlasTexture_c1cq7")
+sprite_color = Color(1, 0, 0.443137, 1)
+description = ""
+flavor_text = ""
+max_health_value = 0
+damage_range = Vector2(8, 10)

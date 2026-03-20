@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bll3qrwj765ed"]
+
+[ext_resource type="Script" path="res://Scripts/cell_grid.gd" id="1_o0mnf"]
+
+[node name="CellGrid" type="Node2D" groups=["cell_grid"]]
+script = ExtResource("1_o0mnf")

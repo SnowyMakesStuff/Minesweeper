@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CellType" load_steps=4 format=3 uid="uid://bffe1i5vopgip"]
+
+[ext_resource type="Script" path="res://Resources/Cell Types/cell_type.gd" id="1_55j2k"]
+[ext_resource type="Texture2D" uid="uid://dxkt3srigv3sr" path="res://Sprites/cell_sprites.png" id="2_rvkgx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw4de"]
+atlas = ExtResource("2_rvkgx")
+region = Rect2(0, 20, 20, 20)
+
+[resource]
+script = ExtResource("1_55j2k")
+id = "flag"
+display_name = "Flag"
+sprite = SubResource("AtlasTexture_gw4de")
+tooltip = "Something might be here!"
+sprite_color = Color(0.721569, 0.666667, 0.317647, 1)
+tags = Array[int]([])

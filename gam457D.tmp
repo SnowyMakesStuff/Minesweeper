@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm2yb7wayi3mx"]
+
+[ext_resource type="PackedScene" uid="uid://bll3qrwj765ed" path="res://cell_grid.tscn" id="2_2o5yj"]
+[ext_resource type="Texture2D" uid="uid://dv2gf6kwfdkl7" path="res://icon.svg" id="2_8vd37"]
+[ext_resource type="Script" path="res://cell_info.gd" id="3_hpij3"]
+[ext_resource type="FontFile" uid="uid://bwq47wu6fd7d3" path="res://my 3x5 tiny mono pixel font.ttf" id="3_ulh44"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(-8, 8)
+scale = Vector2(4.125, 2.875)
+texture = ExtResource("2_8vd37")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="BuildArea" parent="." instance=ExtResource("2_2o5yj")]
+grid_dimensions = Vector2i(12, 12)
+grid = null
+bombs_amount = 24
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -64.0
+offset_right = -1040.0
+offset_bottom = -584.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+script = ExtResource("3_hpij3")
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_ulh44")
+theme_override_font_sizes/normal_font_size = 6
+text = "A SAFE CELL
+DANGER: 4"

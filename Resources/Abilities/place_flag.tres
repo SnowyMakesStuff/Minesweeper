@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PlaceFlag" load_steps=4 format=3 uid="uid://bcq6n3mfnfl42"]
+
+[ext_resource type="Script" path="res://Resources/Abilities/place_flag.gd" id="1_vvubd"]
+[ext_resource type="Texture2D" uid="uid://c5sjwkule6lwo" path="res://Sprites/ability_icons.png" id="2_b8f6d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx1gf"]
+atlas = ExtResource("2_b8f6d")
+region = Rect2(40, 0, 20, 20)
+
+[resource]
+script = ExtResource("1_vvubd")
+id = "place_flag"
+display_name = "Place Flag"
+texture = SubResource("AtlasTexture_dx1gf")
+description = ""
+flavor_text = ""

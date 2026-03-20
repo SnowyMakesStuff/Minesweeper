@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://gw1ggw8uhgta"]
+
+[ext_resource type="FontFile" uid="uid://bod4oj2x0ptkp" path="res://m3x6.ttf" id="1_dhrf7"]
+
+[resource]
+RichTextLabel/colors/font_outline_color = Color(0.0705882, 0.054902, 0.0784314, 1)
+RichTextLabel/constants/outline_size = 4
+RichTextLabel/fonts/normal_font = ExtResource("1_dhrf7")

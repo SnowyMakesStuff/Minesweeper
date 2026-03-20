@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CellType" load_steps=4 format=3 uid="uid://2gehiwyexa3j"]
+
+[ext_resource type="Script" path="res://Resources/Cell Types/cell_type.gd" id="1_llt86"]
+[ext_resource type="Texture2D" uid="uid://dxkt3srigv3sr" path="res://Sprites/cell_sprites.png" id="2_6toea"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw4de"]
+atlas = ExtResource("2_6toea")
+region = Rect2(40, 0, 20, 20)
+
+[resource]
+script = ExtResource("1_llt86")
+id = "water"
+display_name = "Water"
+sprite = SubResource("AtlasTexture_gw4de")
+tooltip = "Does nothing."
+sprite_color = Color(0.129412, 0.635294, 0.72549, 1)
+tags = Array[int]([2, 3])

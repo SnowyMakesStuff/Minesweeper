@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://dm2yb7wayi3mx"]
+
+[ext_resource type="Resource" uid="uid://cgddvtf3il3hh" path="res://Resources/Cell Types/forest.tres" id="2_ubylm"]
+[ext_resource type="Script" path="res://Scripts/camera_movement.gd" id="3_ev71n"]
+[ext_resource type="PackedScene" uid="uid://bll3qrwj765ed" path="res://Scenes/cell_grid.tscn" id="3_wc18c"]
+[ext_resource type="Script" path="res://Scripts/ability_spawner.gd" id="7_5m5ni"]
+[ext_resource type="Theme" uid="uid://gw1ggw8uhgta" path="res://cell_hint.tres" id="7_k16vj"]
+
+[node name="Game" type="Node2D"]
+
+[node name="BuildArea" parent="." instance=ExtResource("3_wc18c")]
+grid_dimensions = Vector2i(7, 7)
+natural_cell_pool = Array[Resource("res://Resources/Cell Types/cell_type.gd")]([ExtResource("2_ubylm")])
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(10, 10)
+script = ExtResource("3_ev71n")
+base_zoom = 7.0
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+z_index = -999
+offset_left = -640.0
+offset_top = -448.0
+offset_right = 1016.0
+offset_bottom = 728.0
+color = Color(0.0705882, 0.054902, 0.0784314, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AbilitySpawner" type="Node2D" parent="CanvasLayer"]
+script = ExtResource("7_5m5ni")
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/MarginContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("7_k16vj")
+bbcode_enabled = true
+text = "text on left corner of screen"
+scroll_active = false
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
