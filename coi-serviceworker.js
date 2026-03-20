@@ -1,0 +1,1 @@
+// Assume the content of coi-serviceworker.js is somewhere available. Since I don't have the actual content, you'll need to provide it for me to proceed.
